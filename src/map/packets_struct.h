@@ -3779,7 +3779,7 @@ struct PACKET_ZC_SE_CASHSHOP_OPEN {
 } __attribute__((packed));
 DEFINE_PACKET_HEADER(ZC_SE_CASHSHOP_OPEN, 0x0b6e);
 // for ragexeRE in some version this packet unused [4144]
-#elif PACKETVER_MAIN_NUM >= 20101123 || PACKETVER_RE_NUM >= 20120328 || PACKETVER_ZERO_NUM >= defined(PACKETVER_ZERO)
+#elif PACKETVER_MAIN_NUM >= 20101123 || PACKETVER_RE_NUM >= 20120328 || defined(PACKETVER_ZERO)
 struct PACKET_ZC_SE_CASHSHOP_OPEN {
 	int16 packetType;
 	uint32 cashPoints;
@@ -3819,8 +3819,14 @@ struct PACKET_ZC_NPC_EXPANDED_BARTER_OPEN_sub {
 	uint32 index;
 	uint32 zeny;
 	uint32 currency_count;
-	struct PACKET_ZC_NPC_EXPANDED_BARTER_OPEN_sub2 currencies[];
+	// Workaround for fix Visual Studio bug (error C2233). Here should be currencies[]
+	struct PACKET_ZC_NPC_EXPANDED_BARTER_OPEN_sub2 currencies[1];
 } __attribute__((packed));
+
+// Workaround check for Visual Studio bug (error C2233)
+STATIC_ASSERT(sizeof(struct PACKET_ZC_NPC_EXPANDED_BARTER_OPEN_sub2[1]) ==
+	sizeof(struct PACKET_ZC_NPC_EXPANDED_BARTER_OPEN_sub2),
+	"Wrong PACKET_ZC_NPC_EXPANDED_BARTER_OPEN_sub size");
 
 struct PACKET_ZC_NPC_EXPANDED_BARTER_OPEN {
 	int16 packetType;
