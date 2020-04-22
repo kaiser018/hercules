@@ -1,0 +1,38 @@
+﻿  grammar.c
+  libconfig.c
+  scanctx.c
+  scanner.c
+  strbuf.c
+  des.c
+  mutex.c
+  thread.c
+  account.c
+  HPMlogin.c
+  ipban.c
+  lclif.c
+  login.c
+  loginlog.c
+  conf.c
+  core.c
+  packets.c
+  console.c
+  db.c
+  ers.c
+  grfio.c
+  HPM.c
+  memmgr.c
+  md5calc.c
+  nullpo.c
+  random.c
+  showmsg.c
+  socket.c
+  sql.c
+  strlib.c
+  sysinfo.c
+  timer.c
+  utils.c
+  mt19937ar.c
+     Creating library ..\login-server.lib and object ..\login-server.exp
+  Generating code
+  Finished generating code
+  login-server.vcxproj -> D:\Downloads\01_emulator\hercules_PRERE\vcproj-15\..\login-server.exe

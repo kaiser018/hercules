@@ -1,0 +1,2 @@
+D:\Ragnarok Offline Pack 2020 (hercules)\01_emulator\01_emulator\hercules_PRERE\plugins\HPMHooking_char.pdb
+D:\Ragnarok Offline Pack 2020 (hercules)\01_emulator\01_emulator\hercules_PRERE\vcproj-15\plugin-HPMHooking_char\Debug\HPMHooking_char.pdb
